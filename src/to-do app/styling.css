@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ user-select: none;
+ font-family: "Nova Square", serif;
+}
+body{
+ background-color: hsl(207, 26%, 17%);
+}
+@media (max-width: 576px) {
+ .general{
+  background-color: rgb(163, 151, 46);
+  margin: 1.5rem 0.5rem;
+  border-radius: 20px;
+  box-shadow: 1px 3px rgba(0, 0, 0, 0.5);
+  margin-top: 25%;
+  padding-top: 2.5rem;
+ }
+ #userInputDiv{
+  padding-top: 2.5rem;
+ }
+ #userInputDiv, #itemListDiv{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+ }
+ #todoInput, #searchList{
+  padding: 0.85rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+
+  &:focus{
+   background-color: white;
+   color: black;
+   transition: ease-in-out 1s;
+  }
+ }
+ #searchList{
+  margin: 0 auto;
+  }
+ #submitInput, #promptSearch{
+  padding: 0.5rem;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+ }
+ .iconSvg{
+   height: 1.5rem;
+ }
+ #cancel{
+  background-color: red;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 0.2rem;
+  margin-left: 0.6rem;
+
+  &:hover{
+   box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  }
+ }
+ #itemListDiv{
+  margin-top: 2rem;
+  padding: 1rem;
+ 
+  ul{
+   list-style: none; 
+  }
+
+  #label{
+   padding: 0.5rem 1rem;
+   display: block;
+   background-color: rgb(83, 76, 76);
+   font-size: 18px;
+   border-radius: 10px;
+   margin-bottom: 0.7rem;
+  }
+ }
+ #completed{
+  margin-left: 0.8rem;
+  transform: scale(2);
+ }
+ label:has(input[type="checkbox"]:checked) {
+  background-color: green !important;
+  color: white;
+  text-decoration: line-through rgb(6, 85, 6) 2px;
+ }
+ #searchOutcome{
+  background-color: white;
+  width: max-content;
+  border-radius: 5px;
+  padding: 1rem;
+  position: absolute;
+  left: 30%;
+  right: 40%;
+
+  ul{
+   list-style: none;
+   
+
+   li{
+    padding: 0.4rem;
+   }
+  }
+ }
+}
+
+/* for screen > mobile < laptops/ desktop/ PC */
+@media (min-width: 567px) and (max-width: 1023px) {
+ .general{
+  background-color: rgb(163, 151, 46);
+  margin: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 1px 3px rgba(0, 0, 0, 0.5);
+  margin-top: 25%;
+  padding-top: 2.5rem;
+  /* font-size: 20px; */
+ }
+ #userInputDiv{
+  padding-top: 2.5rem;
+ }
+ #userInputDiv, #itemListDiv{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+ }
+ #todoInput, #searchList{
+  padding: 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+
+  &:focus{
+   background-color: white;
+   color: black;
+   transition: ease-in-out 1s;
+  }
+ }
+ #searchList{
+  margin: 0 auto;
+  }
+ #submitInput, #promptSearch{
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+ }
+ .iconSvg{
+   height: 2rem;
+ }
+ #cancel{
+  background-color: red;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 0.2rem;
+  margin-left: 0.6rem;
+
+  &:hover{
+   box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  }
+ }
+ #itemListDiv{
+  margin-top: 2rem;
+  padding: 1rem;
+ 
+  ul{
+   list-style: none; 
+  }
+
+  #label{
+   padding: 0.5rem 1rem;
+   display: block;
+   background-color: rgb(83, 76, 76);
+   font-size: 18px;
+   border-radius: 10px;
+   margin-bottom: 0.7rem;
+   font-size: 25px;
+  }
+ }
+ #completed{
+  margin-left: 0.8rem;
+  transform: scale(2);
+ }
+ label:has(input[type="checkbox"]:checked) {
+  background-color: green !important;
+  color: white;
+  text-decoration: line-through rgb(6, 85, 6) 2px;
+ }
+ #searchOutcome{
+  background-color: white;
+  width: max-content;
+  border-radius: 5px;
+  padding: 1rem;
+  position: absolute;
+  left: 30%;
+  right: 40%;
+  font-size: 20px;
+
+  ul{
+   list-style: none;
+   
+
+   li{
+    padding: 0.4rem;
+   }
+  }
+ }
+}
+
+
+/* screens > mobile > Tablets */
+
+@media (min-width: 1024px) {
+ .general{
+  background-color: rgb(163, 151, 46);
+  margin: 1.5rem 6rem;
+  border-radius: 20px;
+  box-shadow: 1px 3px rgba(0, 0, 0, 0.5);
+  margin-top: 10%;
+  padding-top: 2.5rem;
+ }
+ #userInputDiv{
+  padding-top: 2.5rem;
+ }
+ #userInputDiv, #itemListDiv{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+ }
+ #todoInput, #searchList{
+  padding: 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+
+  &:focus{
+   background-color: white;
+   color: black;
+   transition: ease-in-out 1s;
+  }
+ }
+ #searchList{
+  margin: 0 auto;
+  }
+ #submitInput, #promptSearch{
+  padding: 1.5rem;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+ }
+ .iconSvg{
+   height: 1.5rem;
+   
+ }
+ #cancel{
+  background-color: red;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 0.2rem;
+  margin-left: 0.6rem;
+
+  &:hover{
+   box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  }
+ }
+ #itemListDiv{
+  margin-top: 2rem;
+  padding: 1rem;
+ 
+  ul{
+   list-style: none; 
+  }
+
+  #label{
+   padding: 0.5rem 1rem;
+   display: block;
+   background-color: rgb(83, 76, 76);
+   font-size: 18px;
+   border-radius: 10px;
+   margin-bottom: 0.7rem;
+   font-size: 25px;
+  }
+ }
+ #completed{
+  margin-left: 0.8rem;
+  transform: scale(2);
+ }
+ label:has(input[type="checkbox"]:checked) {
+  background-color: green !important;
+  color: white;
+  text-decoration: line-through rgb(6, 85, 6) 2px;
+ }
+ #searchOutcome{
+  background-color: white;
+  width: max-content;
+  border-radius: 5px;
+  padding: 1rem;
+  position: absolute;
+  left: 45%;
+  right: 50%;
+
+  ul{
+   list-style: none;
+   
+
+   li{
+    padding: 0.4rem;
+   }
+  }
+ }
+}
