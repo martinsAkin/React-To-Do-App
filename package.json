@@ -2,7 +2,7 @@
   "name": "to-do-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://martinsAkin.github.io/React-To-Do-App.git",
+  "homepage": "https://martinsAkin.github.io/React-To-Do-App",
   "type": "module",
   "scripts": {
     "dev": "vite",
